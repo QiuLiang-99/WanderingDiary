@@ -9,6 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(CMAKE_PREFIX_PATH "d:/Qt/QT6.6.0/6.6.1/mingw_64")
+
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
@@ -23,7 +25,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(WanderingDiary
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        StartPaga/startpage.h StartPaga/startpage.cpp StartPaga/startpage.ui
+        src/scene/start/start.h src/scene/start/start.cpp src/scene/start/start.ui
+        src/scene/sceneController/scenecontroller.h src/scene/sceneController/scenecontroller.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET WanderingDiary APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

@@ -42,7 +42,7 @@
     </font>
    </property>
    <property name="text">
-    <string>流浪日记</string>
+    <string>1234</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
